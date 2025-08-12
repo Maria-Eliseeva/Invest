@@ -1,0 +1,6 @@
+section.advantages
+  h2.advantages__title(id="advantages") Our #[span.accent Advantages ]
+  .advantages__cards
+    include card/card.pug
+    each card in cardsData
+      +card(card.image, card.title, card.text)

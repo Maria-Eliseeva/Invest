@@ -1,0 +1,38 @@
+@import "../menu/menu.scss";
+@import "./label.scss";
+@import "./popover.scss";
+
+.header {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  padding-inline-start: $section-padding-inline;
+  padding-top: clamp(0.938rem, 0.625rem + 1.389vw, 1.875rem);
+  margin-bottom: clamp(1.875rem, 0.729rem + 5.093vw, 5.313rem);
+}
+.header-menu__button_cmd {
+  border: none;
+        inline-size: 26px;
+        block-size: 15px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("./images/images/open.png");
+        &_open {
+          display: none;
+        }
+      }
+@media (width<1000px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: $section-padding-inline;
+  }
+  .header-menu {
+    display: none;
+  }
+  .header-menu__button_cmd_open {
+    display: block;
+  }
+}
+

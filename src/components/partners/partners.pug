@@ -1,0 +1,6 @@
+section.partners 
+  h2.partners__title(id="partners") Our #[span.accent Partners]
+  .partners__container 
+    each partner in partnersData 
+      a(href="")
+        img.partners__item(src=partner.img, alt=partner.alt)

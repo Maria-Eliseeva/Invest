@@ -1,0 +1,13 @@
+footer.footer(id="footer")
+  .bord.unbord
+    a(href="")
+      svg.label
+        use.icon(href="./images/images/logo.svg")
+    p.footer__text A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments.
+    include ../menu/menu.pug
+    +menu('footer-menu')
+    button(type="button").footer__button
+      img.footer__button__img(src='./images/images/google-play.png')
+    button(type="button").footer__button
+      img.footer__button__img(src='./images/images/app-store.png')
+  p.main-text.footer__copyright Copyright @ 2021 World Invest - All Rights Reserved

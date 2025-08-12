@@ -1,0 +1,8 @@
+section.QA
+  h2.QA__title(id="qa") Company #[span.accent Roadmap]
+  .bord
+    .QA__container
+      include ./QA-question/QAquestion.pug
+      each question in QAData 
+        +QAquestion(question.question, question.answer)
+

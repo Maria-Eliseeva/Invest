@@ -1,0 +1,66 @@
+@import "../../../mixins/main-text";
+.QA-item {
+  width: 100%;
+  &.bord {
+    align-items: start;
+    flex-direction: column;
+    &:last-of-type {
+      .QA-question{
+        margin-bottom: 0px;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &:first-of-type {
+      .QA-question {
+        margin-top: 0px;
+      }
+    }
+    &[open] {
+        .QA-question {
+          margin-bottom: clamp(0.313rem, 0.104rem + 0.926vw, 0.938rem);
+        }
+    }
+  
+  }
+  &[open] .QA-question::after{
+    transform: scaleY(-1);
+  }
+}
+.QA-question {
+  position: relative;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: $medium-font-weight;
+  font-size: $question-font-size;
+  line-height: 160%;
+  color: $main-color;
+  list-style: none;
+  margin-block: clamp(0.563rem, 0.229rem + 1.481vw, 1.563rem);
+  padding-inline-end:25px;
+  width: 100%;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 14px;
+    background-image: url(../images/images/check.svg);
+    transform: scaleY(1);
+    right: 0px;
+  }
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+.QA-answer {
+  @include main-text;
+  width: min(100%, 740px);
+  margin-bottom: 25px;
+}
+@media(width<1000px){
+  .QA-answer{
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,11 @@
+section.plans
+  h2.plans__title(id="plans") #[span.accent Best Plans] For Investing
+  .plans__container
+    include ./card-plan/card-plan.pug
+    each plan in plansData
+      +card-plan(plan.title, plan.cost, plan.percent, plan.text, plan.pointData, plan.value)
+  .plans__button__container 
+    .bord
+      button(type="button").plans__button &lt;
+    .bord
+      button(type="button").plans__button &gt;

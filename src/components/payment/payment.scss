@@ -1,0 +1,22 @@
+@import "../../mixins/title";
+@import "../../mixins/main-text";
+@import "./payment-card/payment-card";
+@import "../../mixins/section";
+.payment{
+  @include section;
+  &__title{
+    @include title;
+    margin-bottom: 10px;
+  }
+  &_subtitle{
+    justify-self: center;
+    @include main-text;
+    margin-bottom: clamp(1.875rem, 1.458rem + 1.852vw, 3.125rem);
+  }
+  &__container{
+    display: flex;
+    gap:clamp(0.625rem, 0.208rem + 1.852vw, 1.875rem);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

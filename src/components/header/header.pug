@@ -1,0 +1,35 @@
+header.header
+  svg.label
+    use.icon(href="./images/images/logo.svg")
+  include ../menu/menu.pug
+  +menu('header-menu')
+  button(type="button").header-menu__button_cmd.header-menu__button_cmd_open(popovertarget="menu-dialog", popovertargetaction="show")
+    span.vissually-hidden Показать меню
+  nav(id="menu-dialog" popover)
+    ul.popover
+      li 
+        button(type="button").header-menu__button_cmd(popovertarget="menu-dialog" popovertargetaction="hide")
+          span.vissually-hidden Скрыть меню
+      li
+        a(href="").menu__link Home
+      li 
+        a(href="").menu__link About
+      li
+        a(href="").menu__link Investments
+      li
+        a(href="").menu__link Referral
+      li
+        a(href="").menu__link News
+      li
+        a(href="").menu__link Contact
+      li
+        div.bord
+          button(type="button").menu__button Registration
+      li
+        div.bord
+          button(type="button").menu__button Sign In
+      li 
+        select.menu__select-language(name="language")
+          option
+            span.eng(selected="selected") Eng
+          option.rus Rus

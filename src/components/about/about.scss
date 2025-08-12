@@ -1,0 +1,23 @@
+@import "../../mixins/title";
+@import "../../mixins/main-text";
+@import "../../mixins/section";
+.about {
+  @include section;
+  &__title {
+    @include title;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    @include main-text;
+  }
+}
+@media (width<1000px){
+  .about{
+    &__title{
+      margin-bottom:58px;
+    }
+
+  }
+}

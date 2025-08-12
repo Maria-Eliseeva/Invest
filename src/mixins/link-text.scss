@@ -1,0 +1,9 @@
+@mixin link-text {
+  font-family: $main-font;
+  color: $main-color;
+  font-weight: $main-weight;
+  font-size: $link-font-size;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  font-style: normal;
+}

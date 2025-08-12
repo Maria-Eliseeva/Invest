@@ -1,0 +1,9 @@
+mixin roadmap-card(title, subtitle, text)
+  .bord
+    .roadmap-card
+      h3.roadmap-card__title= title
+      h4.roadmap-card__subtitle= subtitle
+      if text.length > 0
+          .roadmap-card__text__container
+            each point in text
+              p.roadmap-card__text= point  

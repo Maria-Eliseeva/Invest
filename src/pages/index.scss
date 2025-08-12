@@ -1,0 +1,97 @@
+@import './variables.scss';
+@import '../components/header/header';
+@import '../components/start-page/start-page';
+@import '../components/advantages/advantages';
+@import '../components/about/about';
+@import '../components/plans/plans';
+@import '../components/roadmap/roadmap';
+@import '../components/payment/payment';
+@import '../components/QA/QA';
+@import '../components/partners/partners';
+@import '../components/footer/footer';
+
+
+.bord {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  justify-content: center;
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    clip-path: polygon(
+      0% 100%,
+      1px 100%,
+      1px 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) calc(100% - 1px),
+      1px calc(100% - 1px),
+      1px 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
+    background: radial-gradient(
+        circle at top right,
+        rgb(0 0 0 / 0.5) 0%,
+        transparent 100%
+      ),
+      radial-gradient(
+        circle at top left,
+        rgba(255 255 255 / 0.81) 0%,
+        rgba(255 255 255 / 0.19) 100%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        $accent-color 0%,
+        rgb(146 59 236 / 0.05) 100%
+      ),
+      linear-gradient(
+        -45deg,
+        rgba(255 255 255 / 0.19) 0%,
+        rgba(255 255 255 / 0.06)
+      );
+  }
+}
+
+.unbord {
+  width:auto;
+  &::after {
+    clip-path: polygon(100% 99%, 100% 100%, 1% 100%, 1% 99%);
+  }
+}
+
+.accent {
+  color: $accent-color;
+}
+
+.background{
+  background-repeat: no-repeat;
+  background-size: contain;
+ 
+}
+.bg-start{
+  background-size: cover;
+  background-image: url(./images/images/bg-1.png);
+}
+.bg-moon{
+   background-image: url(./images/images/bg-2.png);
+   background-position: left bottom;
+}
+.bg-block-right{
+  background-image: url(./images/images/bg-3.png);
+  background-position: center right;
+}
+.bg-block-left{
+  background-image: url(./images/images/bg-4.png);
+  background-position: left top;
+  background-size: auto;
+}
+@media(width<400px){
+  .background{
+    background-image: none;
+  }
+}

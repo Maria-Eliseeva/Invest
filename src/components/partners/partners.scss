@@ -1,0 +1,32 @@
+@import "../../mixins/title";
+@import "../../mixins/section";
+.partners{
+  @include section;
+  &__title{
+    @include title;
+    margin-bottom:clamp(1.75rem, 0.333rem + 6.296vw, 6rem);
+  }
+  &__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 55px;
+  }
+  &__item{
+    max-width: 200px;
+    object-fit: none;
+  }
+}
+@media(width<1000px){
+  .partners{
+    &__container{
+      display: flex;
+      flex-direction: column;
+      gap:61px;
+    }
+    &__item{
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../mixins/title';
+@import "../../mixins/section";
+@import "./card/card";
+.advantages{
+  @include section;
+  &__title{
+    @include title;
+    justify-self: center;
+    
+  }
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: clamp(1.875rem, 1.458rem + 1.852vw, 3.125rem);
+    column-gap: 88px;
+  }
+}
+@media (width<1000px){
+  .advantages{
+    &__cards{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

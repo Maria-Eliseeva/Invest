@@ -1,0 +1,18 @@
+@import "../../../mixins/main-text";
+@import "../../../mixins/card-title";
+.card {
+  display: inline-block;
+  &__title {
+    @include card-title;
+    margin-top:20px;
+    margin-bottom: 11px;
+  }
+  &__text {
+    @include main-text;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  &__img{
+    margin: calc(($advantages-icon-size - $advantages-img-size) / 2);
+  }
+}

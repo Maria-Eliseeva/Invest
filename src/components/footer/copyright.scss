@@ -1,0 +1,10 @@
+.footer__copyright{
+    font-family: $main-font;
+    font-style: normal;
+    grid-column: span 3;
+    justify-self: center;
+    font-weight: $light-font-weight;
+    font-size: 12px;
+    line-height: 170%;
+    color: $main-text-color;
+}

@@ -1,0 +1,139 @@
+extends ../layouts/default
+
+block variables
+  - var title = "Главная страница";
+  - var pageStylesheet = "./index.css";
+  -
+    var cardsData = [
+      {'image': './images/images/icon-wave.svg', 'title': 'Robust workflow', 'text': 'One advanced diverted domestic sex repeated bringing you old possible procured her trifling laughter thoughts'},
+      {'image': './images/images/Numerical-Star.svg', 'title': 'Flexibility', 'text': 'One advanced diverted domestic sex repeated bringing you old possible procured her trifling laughter thoughts'},
+      {'image': './images/images/message.png', 'title': 'User friendly', 'text': 'One advanced diverted domestic sex repeated bringing you old possible procured her trifling laughter thoughts'},
+      {'image': './images/images/Security-Safe.png', 'title': 'Multiple layouts', 'text': 'One advanced diverted domestic sex repeated bringing you old possible procured her trifling laughter thoughts'},
+      {'image': './images/images/group.svg', 'title': 'Better components', 'text': 'One advanced diverted domestic sex repeated bringing you old possible procured her trifling laughter thoughts'},
+      {'image': './images/images/filter.svg', 'title': 'Well organised', 'text': 'One advanced diverted domestic sex repeated bringing you old possible procured her trifling laughter thoughts'}
+      
+    ]
+  -
+    var plansData = [
+      {'title': 'Smart Investor (BTC)','value':'1', 'cost': '$5–1.000', 'percent': '1.1% Daily', 'text': 'Be self corrected, based on the history of success and failure, taking into account the correlation of.', 'pointData': [
+          'Deposit for 20 days',
+          'Daily charge',
+          'Deposit at the end of the term'
+        ] },
+      {'title': 'Smart Investor (BTC)','value':'2', 'cost': '$5–1.000', 'percent': '1.1% Daily', 'text': 'Be self corrected, based on the history of success and failure, taking into account the correlation of.', 
+      'pointData': [
+          'Deposit for 40 days',
+          'Daily charge',
+          'Deposit at the end of the term'
+        ]
+         },
+      {'title': 'Smart Investor (BTC)','value':'3', 'cost': '$5–1.000', 'percent': '1.1% Daily', 'text': 'Be self corrected, based on the history of success and failure, taking into account the correlation of.', 
+      'pointData': [
+          'Deposit for 60 days',
+          'Daily charge',
+          'Deposit at the end of the term'
+        ]
+         },
+      {'title': 'Smart Investor (BTC)','value':'4', 'cost': '$5–1.000', 'percent': '1.1% Daily', 'text': 'Be self corrected, based on the history of success and failure, taking into account the correlation of.', 
+      'pointData': [
+          'Deposit for 60 days',
+          'Daily charge',
+          'Deposit at the end of the term'
+        ]
+         }
+    ]
+  -
+    var roadmapData = [
+      {
+        title: "Q4 – 21’", 
+        subtitle: "Multiple layouts",
+        date: [
+          '– One advanced diverted domestic',
+          '– Repeated bringing you old possible',
+          '– Procured her trifling laughter thoughts',
+          '– Being formed around a core',
+          '– Leagues and tournaments'
+        ]
+      },
+      {
+        title: "Q1 – 22’", 
+        subtitle: "Multiple layouts",
+        date: [
+          '– One advanced diverted domestic',
+          '– Repeated bringing you old possible',
+          '– Procured her trifling laughter thoughts',
+          '– Being formed around a core',
+          '– Leagues and tournaments'
+        ]
+      },
+      {
+        title: "Q4 – 23’", 
+        subtitle: "Multiple layouts",
+        date: [
+          '– One advanced diverted domestic',
+          '– Repeated bringing you old possible',
+          '– Procured her trifling laughter thoughts',
+          '– Being formed around a core',
+          '– Leagues and tournaments'
+        ]
+      }
+    ]
+  -
+    var QAData = [
+      {'question':'How do I create an account?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'How many accounts can i create?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'Paid or free account activation?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'How do I change my account information?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'What investment offers does the platform offer?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'What payment systems does the project support?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'What is the minimum amount I can withdraw?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'Is my personal data shared with third parties?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'How I can activate my personal account?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'},
+      {'question':'How I can withdraw money to BTC wallet?','answer':'A powerful ecosystem is being formed around a core consisting of: teams and e-sportsmen, leagues and tournaments, e-sports audiences and communities, game publishers and developers, media and media companies.'}
+    ]
+  -
+    var partnersData = [
+      {'img':'./images/images/binance.svg', 'alt':'binance'},
+      {'img':'./images/images/coinbase.svg', 'alt':'coinbase'},
+      {'img':'./images/images/robinhood.svg', 'alt':'robinhood'},
+      {'img':'./images/images/simplex.svg', 'alt':'simplex'},
+      {'img':'./images/images/usdt.svg', 'alt':'usdt'},
+      {'img':'./images/images/cloud.svg', 'alt':'cloud'},
+      {'img':'./images/images/b.svg', 'alt':'b'},
+      {'img':'./images/images/x.svg', 'alt':'x'}
+    ]
+  -
+    var paymentData=[
+    {'img':'./images/images/perfect-money.png','title':'PerfectMoney'},
+    {'img':'./images/images/btc.png','title':'Bitcoin (BTC)'},
+    {'img':'./images/images/eth.png','title':'Ethereum (ETH)'},
+    {'img':'./images/images/ltc.png','title':'Litecoin (LTC)'},
+    {'img':'./images/images/bnb.png','title':'Binance Coin (BNB)'},
+    {'img':'./images/images/doge.png','title':'Dogecoin (DOGE)'},
+    {'img':'./images/images/tron.png','title':'Tron (TRX)'},
+    {'img':'./images/images/usdt1.png','title':'USDT ERC20'},
+    {'img':'./images/images/usdt2.png','title':'USDT TRC20'}
+    ]
+  
+block content
+  .background.bg-start
+    include ../components/header/header
+    include ../components/start-page/start-page.pug
+  .background.bg-moon
+    include ../components/advantages/advantages.pug
+    include ../components/about/about.pug
+  .background.bg-block-right
+    include ../components/plans/plans.pug
+    include ../components/roadmap/roadmap.pug
+  .background.bg-block-left
+    include ../components/payment/payment.pug
+    include ../components/QA/QA.pug
+  .background.bg-block-right
+    include ../components/partners/partners.pug
+    include ../components/footer/footer
+
+    
+    
+
+
+  

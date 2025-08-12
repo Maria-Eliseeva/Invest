@@ -1,0 +1,10 @@
+@mixin title {
+  font-family:$main-font;
+  font-style: normal;
+  font-weight: $title-weight;
+  font-size: $title-size;
+  line-height: 120%;
+  color: $main-color;
+  justify-self: center;
+  margin-bottom: $title-margin-bottom;
+}

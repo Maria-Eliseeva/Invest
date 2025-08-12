@@ -1,0 +1,30 @@
+mixin menu(place)
+  nav
+    ul(class=[place, 'menu'])
+      li
+        a.menu__link(href="") Home
+      li
+        a.menu__link(href="#about") About
+      li
+        a.menu__link(href="#plans") Investments
+      li
+        a.menu__link(href="#payment") Referral
+      li
+        a.menu__link(href="#roadmap") News
+      li
+        a.menu__link(href="#qa") FAQ
+      if place ==="header-menu"
+        li
+          a.menu__link(href="#footer") Contact
+        li
+          a.menu__link(href="#footer") Privacy
+        li
+          .bord
+            button.menu__button(type="button") Registration
+        li
+          .bord
+            button.menu__button(type="button") Sign In
+        li
+          select.menu__select-language(name="language")
+            option(selected="selected") Eng
+            option.rus Rus

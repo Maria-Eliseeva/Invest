@@ -1,0 +1,7 @@
+section.payment
+  h2.payment__title(id="payment") #[span.accent Payment] Processors
+  p.payment_subtitle We work with:
+  .payment__container
+    include ./payment-card/payment-card.pug
+    each card in paymentData
+      +payment-card(card.img, card.title)

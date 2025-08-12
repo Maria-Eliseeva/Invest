@@ -1,0 +1,33 @@
+
+.popover {
+  margin: 0px;
+  list-style: none;
+  position: fixed;
+  inset: 0 0 0 auto;
+  display: grid;
+  background-color: $accent-color;
+  place-items: center;
+  inline-size: 50%;
+  block-size: 100%;
+  border: none;
+  padding: 0px;
+  transition: translate 0.3s ease-in-out;
+  translate: 0%;
+  li:has(.header__menu__button_cmd_close) {
+    justify-self: end;
+    align-self: start;
+    padding-inline-end: $section-padding-inline;
+    padding-top: calc(clamp(0.938rem, 0.729rem + 0.926vw, 1.563rem) + 12px);
+  }
+}
+#menu-dialog {
+  padding: 0px;
+  border: none;
+}
+#menu-dialog:popover-open::backdrop {
+  backdrop-filter: blur(20px);
+}
+
+body:has(#menu-dialog:popover-open) {
+  overflow: hidden;
+}

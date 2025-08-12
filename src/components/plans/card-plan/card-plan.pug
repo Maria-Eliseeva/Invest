@@ -1,0 +1,16 @@
+mixin card-plan(title, costs, percent, text, pointData, value)
+  label.bord
+    input(name="plan" type="radio" value=value).card-plan__input.vissually-hidden
+    article.card-plan
+      h3.card-plan__title= title
+      .card-plan__container
+        p.card-plan__costs= costs
+        p.card-plan__percent.accent= percent
+      .bord.unbord 
+        .card-plan__text= text
+      if pointData.length > 0
+        .card-plan__pointData
+          each point in pointData
+            p.card-plan__pointData__text= point  
+      .bord.card-plan__button__container
+        button(type="button").card-plan__button Get Started

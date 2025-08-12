@@ -1,0 +1,14 @@
+@mixin section{
+  position: relative;
+  padding-bottom: $section-padding-bottom;
+  padding-inline: $section-padding-inline;
+  &::after{
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: clamp(1.875rem, 1.458rem + 1.852vw, 3.125rem);
+    background-image: linear-gradient($main-color 0%, $accent-color 100%);
+    left: min(50vw, 1440px / 2);
+    bottom: 20px;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../mixins/page-button";
+@import "../../mixins/link-text";
+@import "../../mixins/link-hover";
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 29px;
+    margin-block: 0px;
+    margin-left: clamp(0.313rem, -1.312rem + 7.222vw, 40px);
+    &__link {
+      @include link-text;
+      cursor: pointer;
+      position: relative;
+      transition:all 0.3s ease-in-out;
+      @include link-hover;
+    }
+    &__button {
+      @include page-button;
+      &:hover {
+      border-color: $mark-color;
+  }
+    }
+    &__select-language {
+      background-color: transparent;
+      border: none;
+      @include link-text;
+      cursor: pointer;
+      border-bottom: 2px solid transparent; 
+      transition:border-color 0.3s ease-in-out;
+      &:hover {
+    text-shadow: 1px 1px $mark-color;
+    border-color: $mark-color;
+  }
+      option {
+        color: black;
+      }
+    }
+  }

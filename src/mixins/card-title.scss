@@ -1,0 +1,8 @@
+@mixin card-title {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: $medium-font-weight;
+    font-size: 20px;
+    line-height: 120%;
+    color: #ffffff;
+}

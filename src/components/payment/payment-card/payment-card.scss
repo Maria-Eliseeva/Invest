@@ -1,0 +1,20 @@
+@import "../../../mixins/card-title";
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+  gap: 15px;
+  height: 129px;
+  width: clamp(10.313rem, 10.104rem + 0.926vw, 10.938rem);
+  &__img {
+    display: inline-block;
+    height: 55px;
+    object-fit: contain;
+  }
+  &__title {
+    @include card-title;
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../mixins/title";
+@import './QA-question/QAquestion';
+@import "../../mixins/section";
+.QA {
+  @include section;
+  &__title{
+    @include title;
+
+  }
+  .bord{
+    width: 100%;
+  }
+  &__container{
+    width: 100%;
+    padding: clamp(0.938rem, 0.208rem + 3.241vw, 3.125rem);
+    display: flex;
+    flex-direction: column;
+  }
+}

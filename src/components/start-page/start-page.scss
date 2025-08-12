@@ -1,0 +1,83 @@
+@import "../../mixins/title";
+@import "../../mixins/page-button";
+@import "../../mixins/mark";
+@import "../../mixins/section";
+@import "../../mixins/main-text";
+
+.start-page {
+  @include section;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  
+  &__title {
+    @include title;
+    font-size: $title-start-page-size;
+    grid-row: 2;
+    margin-bottom: 0px;
+  }
+  &__img {
+    object-fit: contain;
+    width: clamp(21.25rem, 17.813rem + 15.278vw, 31.563rem);
+    grid-row: span 5;
+    backdrop-filter: blur(25px);
+    clip-path: polygon(
+      57.54% 2.21%,
+      57.97% 3.77%,
+      58.17% 12.35%,
+      100% 22.92%,
+      73.83% 100%,
+      18.98% 87.1%,
+      19.7% 80.94%,
+      0.48% 80.34%,
+      0% 0%,
+      54.95% 0.32%
+    );
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    &__text {
+      display: flex;
+      align-content: center;
+      margin-bottom: 15px;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: $light-font-weight;
+      font-size: clamp(0.875rem, 0.833rem + 0.185vw, 1rem);
+      line-height: 120%;
+      color: $main-text-color;
+      &:last-of-type {
+        margin-bottom: 0px;
+      }
+      &::before {
+        content: "";
+        @include mark;
+      }
+    }
+  }
+  &__button {
+    @include page-button;
+    &-bord {
+      height: 60px;
+      width: 200px;
+      align-self: center;
+    }
+  }
+}
+
+@media (width<1000px) {
+  .start-page {
+    display: flex;
+    flex-direction: column;
+    &__img {
+      margin-block: 35px;
+    }
+    &__button-bord {
+      align-self: start;
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+}
