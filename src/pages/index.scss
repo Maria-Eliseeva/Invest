@@ -71,11 +71,15 @@
 .background{
   background-repeat: no-repeat;
   background-size: contain;
- 
 }
 .bg-start{
   background-size: cover;
   background-image: url(./images/images/bg-1.png);
+}
+@media(width>2000px){
+  .bg-start{
+  background-size: contain;
+}
 }
 .bg-moon{
    background-image: url(./images/images/bg-2.png);

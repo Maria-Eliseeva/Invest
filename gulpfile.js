@@ -44,7 +44,7 @@ function pagesScss() {
       mediaquery(),
       cssnano()
   ];
-  return gulp.src('src/pages/**/*.scss')
+  return gulp.src('src/pages/**/index.scss')
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(gulp.dest('dist/'))

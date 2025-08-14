@@ -3,6 +3,8 @@
 @import "./popover.scss";
 
 .header {
+  max-width: 1440px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;

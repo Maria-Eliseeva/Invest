@@ -1,6 +1,8 @@
 @import "../../mixins/main-text";
 @import "./copyright.scss";
 .footer {
+  max-width: 1440px;
+  margin: 0 auto;
   padding-inline: $section-padding-inline;
   nav{
     grid-row: span 2;

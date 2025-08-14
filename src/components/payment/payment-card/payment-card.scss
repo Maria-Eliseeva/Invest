@@ -16,5 +16,6 @@
   }
   &__title {
     @include card-title;
+    text-align: center;
   }
 }
